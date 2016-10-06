@@ -13,6 +13,7 @@ import javax.persistence.Table;
 public class Article {
 	@Id
 	@GeneratedValue
+	@Column(name="article_id")
 	private Integer articleId;
 	
 	@Column(name="title")
