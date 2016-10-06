@@ -1,17 +1,21 @@
 package com.reader.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "article")
 public class Article {
 	@Id
 	@GeneratedValue
 	private Integer articleId;
 	
+	@Column(name="title")
 	private String name;
 	
 	@ManyToOne
@@ -41,5 +45,4 @@ public class Article {
 	public void setUserId(User userId) {
 		this.userId = userId;
 	}
-
 }
